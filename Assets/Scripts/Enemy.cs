@@ -32,8 +32,6 @@ public class Enemy : MonoBehaviour
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
     }
-
-
     private void Fire()
     {
         GameObject laser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
@@ -44,12 +42,14 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        if(!damageDealer) { return; }
         ProcessHit(damageDealer);
     }
 
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        damageDealer.Hit();
         if (health <= 0)
         {
             Destroy(gameObject);
