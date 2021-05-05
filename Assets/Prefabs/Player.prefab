@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3291455740479950401}
   - component: {fileID: 3291455740479950462}
-  - component: {fileID: 3291455740479950463}
   - component: {fileID: 6362028234027293122}
+  - component: {fileID: -1888533214938216495}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -83,25 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3291455740479950463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3291455740479950460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51e19c63216ea9048b5dbef2baf012c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  padding: 0.35
-  health: 200
-  laserPrefab: {fileID: 165846192808470813, guid: 2af804ac452dbde47b403a0b575920b8,
-    type: 3}
-  projectileSpeed: 20
-  projectileFiringPeriod: 0.1
 --- !u!58 &6362028234027293122
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -118,3 +99,29 @@ CircleCollider2D:
   m_Offset: {x: 0.007745743, y: 0}
   serializedVersion: 2
   m_Radius: 0.37106887
+--- !u!114 &-1888533214938216495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3291455740479950460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e19c63216ea9048b5dbef2baf012c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  padding: 1
+  health: 200
+  deathSFX: {fileID: 8300000, guid: 485ed4f3fc49d8d40baffff0c9c7ca90, type: 3}
+  deathSFXVolume: 0.75
+  deathVFX: {fileID: 5768166140418567416, guid: 86015e0c970f2fb4d9d14f2389a987dd,
+    type: 3}
+  durationOfExplosion: 1
+  laserPrefab: {fileID: 165846192808470813, guid: 2af804ac452dbde47b403a0b575920b8,
+    type: 3}
+  projectileSpeed: 10
+  projectileFiringPeriod: 0.1
+  shootSound: {fileID: 8300000, guid: ec9f426e1a908104696df3fcb9a09b63, type: 3}
+  shootSoundVolume: 0.15

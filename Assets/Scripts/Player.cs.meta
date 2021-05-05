@@ -3,7 +3,11 @@ guid: 51e19c63216ea9048b5dbef2baf012c8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - deathSFX: {fileID: 8300000, guid: 485ed4f3fc49d8d40baffff0c9c7ca90, type: 3}
+  - deathVFX: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
+  - laserPrefab: {fileID: 165846192808470813, guid: 2af804ac452dbde47b403a0b575920b8,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
